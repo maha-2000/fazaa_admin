@@ -1,21 +1,42 @@
-import 'package:admin_panel/constant.dart';
-import 'package:admin_panel/notices_page.dart';
+
+
+import 'package:admin_panel/reporting_page.dart';
 import 'package:admin_panel/setting_page.dart';
-import 'package:admin_panel/tenants_page.dart';
-import 'package:admin_panel/units_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_admin_scaffold/admin_scaffold.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import 'constant.dart';
 import 'dash_page.dart';
+import 'donation_page.dart';
+import 'notices_page.dart';
 
 enum SideBarItem {
   dashboard(
-      value: 'الملف الشخصي', iconData: Icons.edit_note, body: DashboardScreen()),
-  units(value: 'البلاغات', iconData: Icons.report, body: UnitsScreen()),
-  tenants(value: 'التبرعات', iconData: Icons.handshake, body: TenantsScreen()),
-  notices(value: 'الإرشادات', iconData: Icons.integration_instructions, body: NoticesScreen()),
-  settings(value: 'الضبط', iconData: Icons.settings, body: SettingsScreen());
+    value: 'الملف الشخصي',
+    iconData: Icons.edit_note,
+    body: DashboardScreen(),
+  ),
+  units(
+    value: 'البلاغات',
+    iconData: Icons.report,
+    body: ReportingPage(),
+  ),
+  tenants(
+    value: 'التبرعات',
+    iconData: Icons.handshake,
+    body: DonationPage(),
+  ),
+  settings(
+    value: 'المستفيدين',
+    iconData: Icons.people,
+    body: SettingsScreen(),
+  ),
+  notices(
+    value: 'الإرشادات',
+    iconData: Icons.integration_instructions,
+    body: NoticesScreen(),
+  );
 
   const SideBarItem(
       {required this.value, required this.iconData, required this.body});
@@ -62,12 +83,3 @@ class HomePage extends ConsumerWidget {
         body: sideBarItem.body);
   }
 }
-
-
-
-
-
-
-
-
-

@@ -1,12 +1,13 @@
 import 'package:admin_panel/constant.dart';
-import 'package:flutter/material.dart' show AppBar, BuildContext, Center, ColorScheme, Colors, Column, FloatingActionButton, Icon, Icons, MainAxisAlignment, MaterialApp, Scaffold, State, StatefulWidget, StatelessWidget, Text, Theme, ThemeData, Widget, runApp;
+import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:flutter_localization/flutter_localization.dart';
 
+import 'custom_page.dart';
 import 'home_page.dart';
 
 void main() {
-  runApp(ProviderScope(child: const MyApp()));
+  runApp(const ProviderScope(child: MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -16,15 +17,23 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      // localizationsDelegates: [
-      //   GlobalMaterialLocalization.d
-      // ],
+      localizationsDelegates: const [
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+      ],
+      locale: const Locale('ar'),
+      debugShowCheckedModeBanner: false,
+      supportedLocales: const [
+        Locale('ar'),
+      ],
       title: 'Fazaa Admin',
       theme: ThemeData(
+        fontFamily: "Tajawal",
         primaryColor: kPrimaryColor,
         useMaterial3: true,
       ),
-      home: const HomePage(),
+      home:  const HomePage(),
     );
   }
 }
