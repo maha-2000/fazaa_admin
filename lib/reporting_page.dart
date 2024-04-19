@@ -8,6 +8,12 @@ class ReportingPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: const Text(
+          "البلاغات"
+        ),
+        centerTitle: true,
+      ),
       backgroundColor: kPrimaryColor,
       body: Center(
         child: GridView.count(

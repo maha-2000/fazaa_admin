@@ -8,6 +8,12 @@ class DonationPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title:  const Text(
+          "التبرعات",
+        ),
+        centerTitle: true,
+      ),
       backgroundColor: kPrimaryColor,
       body: Center(
         child: GridView.count(
@@ -16,19 +22,8 @@ class DonationPage extends StatelessWidget {
             MyCard(
               name: "آية حمودة",
               phone: "0987463675",
-              type: "",
-              location: "الشهباء القديمة",
-              icon: Icon(
-                Icons.check_box,
-                color: Colors.green,
-              ),
-              status: "تمت المعالجة",
-            ),
-            MyCard(
-              name: "رؤى كنيفاتي ",
-              phone: "0987463675",
-              type: "خراب بسبب الزلزال",
-              location: "المحافظة",
+              type: "تبرع بالمسكن",
+              location: "منطقة الحمدانية",
               icon: Icon(
                 Icons.error_rounded,
                 color: Colors.red,
@@ -36,10 +31,21 @@ class DonationPage extends StatelessWidget {
               status: "تم الرفض",
             ),
             MyCard(
-              name: "احمد فياض",
+              name: "ماهر الاحمد",
               phone: "0987463675",
-              type: "مساعدة مالية ضرورية",
-              location: "الزبدية",
+              type: "تبرع بالوقت",
+              location: "الموكامبو",
+              icon: Icon(
+                Icons.stream,
+                color: Colors.orangeAccent,
+              ),
+              status: "قيد المعالجة",
+            ),
+            MyCard(
+              name: "مها الياسين",
+              phone: "0987463675",
+              type: "تبرع بالوقت",
+              location: "الاشرفية",
               icon: Icon(
                 Icons.check_box,
                 color: Colors.green,
@@ -49,8 +55,8 @@ class DonationPage extends StatelessWidget {
             MyCard(
               name: "محمود سليم",
               phone: "0987463675",
-              type: "حريق في مكان العمل",
-              location: " الشيخ نجار",
+              type: "تبرع بالغذاء",
+              location: "الزهراء",
               icon: Icon(
                 Icons.stream,
                 color: Colors.orangeAccent,
@@ -60,11 +66,34 @@ class DonationPage extends StatelessWidget {
             MyCard(
               name: "محمد عبد الرحيم",
               phone: "0987463675",
-              type: "طوفان",
-              location: "بستان القصر",
+              type: "تبرع بالمال",
+              location: " حلب الجديدة",
               icon: Icon(Icons.stream, color: Colors.orangeAccent),
               status: "قيد المعالجة",
             ),
+            MyCard(
+              name: "لين الخالد",
+              phone: "0987463675",
+              type: "تبرع باللباس",
+              location: "منطقة الحمدانية",
+              icon: Icon(
+                Icons.check_box,
+                color: Colors.green,
+              ),
+              status: "تم الرفض",
+            ),
+            MyCard(
+              name: "ياسين الحسن",
+              phone: "0987463675",
+              type: "تبرع بالمسكن",
+              location: "بستان القصر",
+              icon: Icon(
+                Icons.error_rounded,
+                color: Colors.red,
+              ),
+              status: "تم الرفض",
+            ),
+
           ],
         ),
       ),
