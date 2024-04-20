@@ -1,6 +1,5 @@
 import 'package:admin_panel/constant.dart';
 import 'package:flutter/material.dart';
-import 'constant.dart';
 
 class MyCard extends StatelessWidget {
   final String name;

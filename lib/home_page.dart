@@ -15,7 +15,7 @@ enum SideBarItem {
   dashboard(
     value: 'الملف الشخصي',
     iconData: Icons.edit_note,
-    body: DashboardScreen(),
+    body: LoginPage(),
   ),
   units(
     value: 'البلاغات',
